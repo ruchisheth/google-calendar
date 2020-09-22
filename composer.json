@@ -1,0 +1,49 @@
+{
+  "name": "posbill/laravel-google-calendar",
+  "description": "Manage events on a Google Calendar",
+  "keywords": [
+    "posbill",
+    "calendar",
+    "google",
+    "event",
+    "schedule",
+    "laravel-google-calendar"
+  ],
+  "require": {
+    "php": "^7.0",
+    "google/apiclient": "^2.2",
+    "illuminate/support": "^5.4.0",
+    "nesbot/carbon": "^1.21"
+  },
+  "require-dev": {
+    "mockery/mockery": "^1.0",
+    "orchestra/testbench": "~3.4.6",
+    "phpunit/phpunit": "^6.2"
+  },
+  "autoload": {
+    "psr-4": {
+      "PosBill\\GoogleCalendar\\": "src"
+    }
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "PosBill\\GoogleCalendar\\Tests\\": "tests"
+    }
+  },
+  "scripts": {
+    "test": "vendor/bin/phpunit"
+  },
+  "extra": {
+    "laravel": {
+      "providers": [
+        "PosBill\\GoogleCalendar\\GoogleCalendarServiceProvider"
+      ],
+      "aliases": {
+        "GoogleCalendar": "PosBill\\GoogleCalendar\\GoogleCalendarFacade"
+      }
+    }
+  },
+  "config": {
+    "sort-packages": true
+  }
+}
